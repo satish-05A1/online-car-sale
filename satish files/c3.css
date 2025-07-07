@@ -1,0 +1,88 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  background-image: url('c3background.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInBackground 3s ease-out; /* Fade-in animation for the background */
+}
+
+/* Fade-In Background Animation */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Order Container */
+.orders-container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-out; /* Fade-in animation for the content */
+}
+
+/* Icon */
+.order-icon {
+  font-size: 80px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #f0a500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #d48806;
+}
+
+/* Fade-In Animation for Content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

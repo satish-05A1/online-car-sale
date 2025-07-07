@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="c5.css"/>
+</head>
+<body>
+  <div class="contact-container">
+    <h2>CONTACT US</h2>
+
+    <!-- Success message -->
+    <div id="success-message" class="success-message" style="display: none;">
+      ✅ Your message has been sent successfully!
+    </div>
+
+    <!-- Home button -->
+    <div class="home-button-container">
+      <a href="h1.html" class="home-button">Home</a>
+    </div>
+
+    <form id="contactForm" enctype="multipart/form-data">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" />
+
+      <label for="reason">Reason for Contact</label>
+      <select id="reason" name="reason">
+        <option value="">--Please choose an option--</option>
+        <option value="general">General Inquiry</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+        <option value="business">Business/Partnership</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <label for="file">Attachment (optional)</label>
+      <input type="file" id="file" name="file" />
+
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <label><input type="radio" name="contactMethod" value="email" checked /> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone" /> Phone</label>
+      </fieldset>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- JavaScript to show success message -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent real submission
+      successMessage.style.display = 'block'; // Show success message
+      form.reset(); // Optional: Reset form
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBG Cars</title>
+  <link rel="stylesheet" href="c1.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+
+      <!-- Logo -->
+      <div class="logo-area">
+        <div class="logo-oval">
+          <img src="benz1.jpg" alt="Logo" class="logo-img" />
+          <span class="logo-text">MBG CARS</span>
+        </div>
+      </div>
+
+      <!-- Welcome Text -->
+      <h1 class="welcome-heading"><i>WELCOME</i></h1>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="h3.html" class="box orders">ORDERS</a></li>
+          <li><a href="h4.html" class="box support">ABOUT US</a></li>
+          <li><a href="h5.html" class="box contact">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <!-- Search -->
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search for cars..." />
+    </div>
+
+    <!-- Car Options -->
+    <div class="car-options"><br>
+      <a href="https://www.carwale.com/mercedes-benz-cars/">
+        <div class="car-option" id="new-cars">NEW CARS</div>
+      </a><br>
+      <a href="https://www.spinny.com/used-cars-in-hyderabad/s/">
+        <div class="car-option" id="buy-used-cars">BUY USED CARS</div>
+      </a><br>
+      <a href="https://www.racecarsdirect.com/Category/Details/9/race-cars">
+        <div class="car-option" id="race-cars">RACE CARS</div>
+      </a>
+      <a href="https://www.carwale.com/new/best-cars/">
+        <div class="car-option" id="popular-cars">POPULAR CARS</div>
+      </a><br>
+      <a href="https://www.carwale.com/upcoming-cars/">
+        <div class="car-option" id="trending-cars">UPCOMING CARS</div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MBG Cars. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for search redirect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("search");
+
+      searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          const query = searchInput.value.trim();
+          if (query !== "") {
+            const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.location.href = googleSearchUrl;
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

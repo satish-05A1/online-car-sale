@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MBG Cars Online</title>
+  <link rel="stylesheet" href="c2.css">
+  <script src="j2.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <i><h1>MBG CARS ONLINE</h1></i>
+    <form>
+      <input type="text" id="userid" placeholder="User ID" required>
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="gmail" placeholder="Gmail" required>
+      <input type="tel" id="mobile" placeholder="Mobile Number" required>
+      <input type="number" id="income" placeholder="Income" required>
+      <input type="text" id="license" placeholder="Driving License" required>
+      <button type="submit"><a href="h1.html">Login</button></a>
+    </form>
+  </div>
+
+</body>
+</html>
